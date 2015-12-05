@@ -1,0 +1,9 @@
+{
+  "batchname": "batch",
+  "nGramLength": [1, 2],
+  "fieldOptions": [
+    {
+      "fieldName": "tags", "filter": true
+    }
+  ]
+}
