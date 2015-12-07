@@ -1,9 +1,18 @@
 {
-  "batchname": "batch",
-  "nGramLength": [1, 2],
-  "fieldOptions": [
-    {
-      "fieldName": "tags", "filter": true
-    }
-  ]
+    "batchname": "batch",
+    "nGramLength": [1, 2],
+    "fieldOptions": [
+        {
+            "fieldName": "type",
+            "filter": true
+        },
+        {
+            "fieldName": "user",
+            "filter": true
+        },
+        {
+            "fieldName": "tags",
+            "filter": true
+        }
+    ]
 }
