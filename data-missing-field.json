@@ -9,7 +9,6 @@
         "user": [
             "eklem"
         ],
-        "userimage": "",
         "userassigned": null,
         "datehuman": "2014-11-12T09:14:00+01:00",
         "teasertext": "We should have a way of process JSON in addition to HTML since a lot of services offer JSON straight out of the box. \n\nUse case for this is that I'm trying to index my online life and make it searchable. I got the idea on one way to solve it from this blog: http://ift.tt/1p3mrO2 That's giving me JSON directly from Google Spreadsheet, but I still need to remove a lot of noise: http://ift.tt/1yxXC2R \n\nBasically, I want to remove everything before &quot;entry&quot; and massage/adjust in the rest of the file.",

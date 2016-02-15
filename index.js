@@ -4,12 +4,12 @@ var options = {
     indexPath: 'si-debug',
     logLevel: 'info',
     logSilent: false,
-    nGramLength: [1, 2, 3, 4]
+    nGramLength: [1, 2]
 };
 var si = require('search-index')(options);
 var jf = require('jsonfile');
 var configfile = '/Users/eklem/github_modules/search-index-indexer/config.json';
-var data = '/Users/eklem/github_modules/search-index-indexer/data.json';
+var data = '/Users/eklem/github_modules/search-index-indexer/data-missing-field.json';
 
 // Read config file
 var config = jf.readFileSync(configfile);
