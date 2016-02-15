@@ -1,0 +1,50 @@
+[
+    {
+        "date": 1415780040000,
+        "repository": "norch-document-processor",
+        "title": "Process JSON?",
+        "text": "<p>We should have a way of process JSON in addition to HTML since a lot of services offer JSON straight out of the box. </p>\n\n<p>Use case for this is that I&#39;m trying to index my online life and make it searchable. I got the idea on one way to solve it from this blog: http://ift.tt/1p3mrO2 That&#39;s giving me JSON directly from Google Spreadsheet, but I still need to remove a lot of noise: http://ift.tt/1yxXC2R </p>\n\n<p>Basically, I want to remove everything before &quot;entry&quot; and massage/adjust in the rest of the file.</p>",
+        "issuetype": "enhancement",
+        "url": "http://ift.tt/1yxXC2T",
+        "user": [
+            "eklem"
+        ],
+        "userimage": "",
+        "userassigned": null,
+        "datehuman": "2014-11-12T09:14:00+01:00",
+        "teasertext": "We should have a way of process JSON in addition to HTML since a lot of services offer JSON straight out of the box. \n\nUse case for this is that I'm trying to index my online life and make it searchable. I got the idea on one way to solve it from this blog: http://ift.tt/1p3mrO2 That's giving me JSON directly from Google Spreadsheet, but I still need to remove a lot of noise: http://ift.tt/1yxXC2R \n\nBasically, I want to remove everything before &quot;entry&quot; and massage/adjust in the rest of the file.",
+        "tags": [
+            "json",
+            "process"
+        ],
+        "type": [
+            "GitHub"
+        ],
+        "id": "3UqUi1"
+    },
+    {
+        "date": 1415887440000,
+        "repository": "norch",
+        "title": "Searching for an absent nth word results in woe.",
+        "text": "<p>For the test dataset: </p>\n\n<p>&quot;New&quot; works </p>\n\n<p>&quot;York&quot; works </p>\n\n<p>&quot;Yorksdad&quot; works (and returns no results, since it is absent from the index) </p>\n\n<p>&quot;New York&quot; works </p>\n\n<p>&quot;New Yorksdad&quot; results in a catastrophic crash</p>",
+        "issuetype": null,
+        "url": "https://github.com/fergiemcdowall/norch/issues/49",
+        "user": [
+            "fergiemcdowall"
+        ],
+        "userimage": "https://avatars0.githubusercontent.com/u/1122333",
+        "userassigned": null,
+        "datehuman": "2014-11-13T15:04:00+01:00",
+        "teasertext": "For the test dataset: \n\n&quot;New&quot; works \n\n&quot;York&quot; works \n\n&quot;Yorksdad&quot; works (and returns no results, since it is absent from the index) \n\n&quot;New York&quot; works \n\n&quot;New Yorksdad&quot; results in a catastrophic crash",
+        "tags": [
+            "word",
+            "woe",
+            "absent",
+            "results"
+        ],
+        "type": [
+            "GitHub"
+        ],
+        "id": "2VZsBu"
+    }
+]
