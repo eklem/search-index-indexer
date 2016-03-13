@@ -5,14 +5,14 @@ var options = {
     logLevel: 'info',
     logSilent: false,
 };
-var searchIndex = require('search-index')
+var searchIndex = require('search-index');
 var jf = require('jsonfile');
-var configfile = '/Users/eklem/github_modules/search-index-indexer/config.json';
-var data = '/Users/eklem/github_modules/search-index-indexer/data.json';
+var config = require('./config.json');
+var data = require('./data.json');
 
 // Read config file
-var config = jf.readFileSync(configfile);
-var data = jf.readFileSync(data);
+// var config = jf.readFileSync(configfile);
+// var data = jf.readFileSync(data);
 
 // Add to search-index with si.add
 searchIndex(options, function(err, si) {
@@ -25,9 +25,9 @@ searchIndex(options, function(err, si) {
                 //console.dir(config)
 
             // Write config file to see what's there default    ### NOT WORKING ###
-            jf.writeFileSync(configfile, config, {
-                spaces: 4
-            })
+            // jf.writeFileSync(config, config, {
+            //     spaces: 4
+            // })
         } else if (err) {
             console.dir(err);
         }
