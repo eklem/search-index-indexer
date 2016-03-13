@@ -23,11 +23,6 @@ searchIndex(options, function(err, si) {
         if (!err) {
             console.log('Indexed!')
                 //console.dir(config)
-
-            // Write config file to see what's there default    ### NOT WORKING ###
-            // jf.writeFileSync(config, config, {
-            //     spaces: 4
-            // })
         } else if (err) {
             console.dir(err);
         }
