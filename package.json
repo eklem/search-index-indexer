@@ -1,7 +1,7 @@
 {
     "name": "search-index-indexer",
     "description": " A simple JSON indexer to test and debug your JSON format and the search-index si.add API.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "homepage": "https://github.com/eklem/search-index-indexer",
     "engines": {
         "node": ">=0.10.0"
@@ -9,8 +9,10 @@
     "license": "MIT",
     "dependencies": {
         "search-index": "~0.7.6",
-        "iftt-norch-tools": "~0.1.3",
-        "jsonfile": "~2.2.3"
+        "jsonfile": "~2.2.3",
+        "request": "~2.69.0",
+        "async": "2.0.0-rc.2",
+        "commander": "~2.9.0",
     },
     "author": {
         "email": "espen.klem@gmail.com",
