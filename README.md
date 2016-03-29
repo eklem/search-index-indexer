@@ -19,6 +19,6 @@ $ node index.js [options]
 
     -h, --help          output usage information
     -V, --version       output the version number
-    -c, --config [url]  specify the url for the JSON config file
-    -d, --data [url]    specify the url for the JSON data set
+    -c, --config [url]  specify the url for the JSON config file. Just the flag '-c' will give you the default.
+    -d, --data [url]    specify the url for the JSON data set. Just the flag '-d' will give you the default.
 ```
