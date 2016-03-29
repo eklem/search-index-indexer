@@ -1,8 +1,19 @@
 # search-index-indexer
-A simple JSON indexer to test and debug your JSON format and the search-index si.add API.
+A generic indexer for the search engine [search-index](https://github.com/fergiemcdowall/search-index). Takes two JSON files as input: One config file, and one data file.
+
+Created to test and debug your JSON format for both config and data, and the [search-index si.add API](https://github.com/fergiemcdowall/search-index/blob/master/doc/API.md#add).
+
+
+## Install
 
 ```console
-  Usage: node index.js [options]
+  npm install search-index-indexer
+```
+
+## Usage
+
+```console
+  node index.js [options]
 
   Options:
 
