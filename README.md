@@ -10,10 +10,10 @@ Created to test and debug your JSON format for both config and data, and the [se
   npm install search-index-indexer
 ```
 
-## Usage
+## Usage & options
 
 ```console
-  node index.js [options]
+$ node index.js [options]
 
   Options:
 

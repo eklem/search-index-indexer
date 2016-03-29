@@ -16,13 +16,14 @@ var program = require('commander');
 
 // Taking arguments with 'commander' 
 program
-    .version('0.0.3')
-    .option('-c, --config [url]', 'specify the url for the JSON config file', 'https://github.com/eklem/search-index-indexer/blob/master/config.json')
-    .option('-d, --data [url]', 'specify the url for the JSON data set', 'https://raw.githubusercontent.com/eklem/search-index-indexer/master/data.json')
+    .version('0.0.4')
+    .option('-c, --config [url]', 'specify the url for the JSON config file. Just the flag -c will give you the default.', 'https://raw.githubusercontent.com/eklem/search-index-indexer/master/config.json')
+    .option('-d, --data [url]', 'specify the url for the JSON data set. Just the flag -d will give you the default.', 'https://raw.githubusercontent.com/eklem/search-index-indexer/master/data.json')
     .parse(process.argv);
 //Default displaying --help when no arguments
 if (!process.argv.slice(2).length) {
     program.outputHelp();
+    process.exit(1);
 }
 
 configurl = ('%s', program.config);
