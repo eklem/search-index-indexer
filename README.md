@@ -12,7 +12,7 @@ $ npm install search-index-indexer
 
 ## Usage
 
-Upload your JSON config and data set to a GIST, or a GitHub repo and test them with the search-index-indexer.
+Upload your JSON config and data set to a GIST, or a GitHub repo and test them with the search-index-indexer. Remember to use the raw-file.
 
 ### Options
 
