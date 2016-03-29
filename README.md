@@ -10,7 +10,11 @@ Created to test and debug your JSON format for both config and data, and the [se
   npm install search-index-indexer
 ```
 
-## Usage & options
+## Usage
+
+Upload your JSON config and data set to a GIST, or a GitHub repo and test them with the search-index-indexer.
+
+### Options
 
 ```console
 $ node index.js [options]
