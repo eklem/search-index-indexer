@@ -2,7 +2,7 @@
 A simple JSON indexer to test and debug your JSON format and the search-index si.add API.
 
 ```console
-  Usage: index [options]
+  Usage: node index.js [options]
 
   Options:
 
