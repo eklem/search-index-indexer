@@ -6,7 +6,6 @@ var options = {
 var searchIndex = require('search-index');
 var jf = require('jsonfile');
 var request = require('request');
-var async = require('async');
 var program = require('commander');
 
 // Read config file

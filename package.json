@@ -8,10 +8,9 @@
     },
     "license": "MIT",
     "dependencies": {
-        "search-index": "~0.7.6",
+        "search-index": "0.7.6",
         "jsonfile": "~2.2.3",
         "request": "~2.69.0",
-        "async": "2.0.0-rc.2",
         "commander": "~2.9.0"
     },
     "author": {
