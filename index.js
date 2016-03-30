@@ -15,7 +15,7 @@ var program = require('commander');
 
 // Taking arguments with 'commander' 
 program
-    .version('0.0.5')
+    .version('0.1.0')
     .option('-c, --config [url]', 'specify the url for the JSON config file. Just the flag -c will give you the default.', 'https://raw.githubusercontent.com/eklem/search-index-indexer/master/config.json')
     .option('-d, --data [url]', 'specify the url for the JSON data set. Just the flag -d will give you the default.', 'https://raw.githubusercontent.com/eklem/search-index-indexer/master/data.json')
     .parse(process.argv);
