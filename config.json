@@ -11,19 +11,11 @@
             "filter": true
         },
         {
-            "fieldName": "cheff",
+            "fieldName": "user",
             "filter": true
         },
         {
-            "fieldName": "country",
-            "filter": true
-        },
-        {
-            "fieldName": "time",
-            "filter": true
-        },
-        {
-            "fieldName": "ingredients",
+            "fieldName": "tags",
             "filter": true
         }
     ]
