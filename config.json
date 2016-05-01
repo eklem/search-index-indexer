@@ -3,8 +3,7 @@
     "nGramLength": [
         1,
         2,
-        3,
-        4
+        3
     ],
     "fieldOptions": [
         {
@@ -12,11 +11,19 @@
             "filter": true
         },
         {
-            "fieldName": "user",
+            "fieldName": "cheff",
             "filter": true
         },
         {
-            "fieldName": "tags",
+            "fieldName": "country",
+            "filter": true
+        },
+        {
+            "fieldName": "time",
+            "filter": true
+        },
+        {
+            "fieldName": "ingredients",
             "filter": true
         }
     ]
