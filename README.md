@@ -7,7 +7,7 @@
 [![NPM downloads][npm-downloads-image]][npm-url]
 [![MIT License][license-image]][license-url]
 
-A generic indexer for the search engine [search-index](https://github.com/fergiemcdowall/search-index). Takes two JSON files as input: One config file, and one data file.
+A generic indexer for the search engine [search-index](https://github.com/fergiemcdowall/search-index). Takes two JSON files as input: One config file, and one data file. Easy way to test if `search-index` is buggy or it's your own code that is the problem.
 
 ## Install
 
