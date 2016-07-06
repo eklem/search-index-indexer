@@ -45,7 +45,7 @@ if (program.config || program.data) {
                     
                     var options = {
                         indexPath: 'si-debug',
-                        logLevel: 'info',
+                        logLevel: 'warn',
                         logSilent: false,
                         nGramLength: config.nGramLength
                     }
