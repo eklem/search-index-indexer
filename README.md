@@ -31,6 +31,7 @@ $ node index.js [options]
     -c, --config [url]    specify the url for the JSON config file. Just the flag -c will give you the default.
     -d, --data [url]      specify the url for the JSON data set. Just the flag -d will give you the default.
     -i, --items [number]  number of items to process each time. Just the flag -i will give you the default (10).
+```
 
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [license-url]: LICENSE
