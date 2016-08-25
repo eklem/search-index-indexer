@@ -82,16 +82,20 @@ function requestConfig (configurl, data, options, start, end) {
 // Indexer
 function indexData (config, data, options, start, end) {
   // Create a subset of data
-  if (!end) {
-    var end = data.length + 1
+  var end = parseInt(end)
+  var start = parseInt(start)
+  if (!end || end >= data.length) {
+    var dataSubset = data.slice(start)
   }
-  if (end <= data.length) {
-    end = end + 1
+  else if (end < data.length) {
+    var end = (+end) + 1
+    var dataSubset = data.slice(start, end)
   }
-  if (end > data.lengt) {
-    end = data.length +1
-  }
-  var dataSubset = data.slice(start, end)
+  
+  console.dir(dataSubset)
+  console.log('data.length: ' + data.length)
+  console.log('start: ' + start + '\nend: ' + end)
+  console.log('dataSubset length: ' + dataSubset.length)
   data = null
 
   //Add to search - index with si.add
