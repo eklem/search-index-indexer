@@ -84,7 +84,11 @@ function indexData (config, data, options, start, end) {
   // Create a subset of data
   var end = parseInt(end)
   var start = parseInt(start)
-  if (!end || end >= data.length) {
+  if (start > end) {
+    console.log('ERROR: Start higher than end. Unable to slice data array.')
+    return;
+  }
+  else if (!end || end >= data.length) {
     var dataSubset = data.slice(start)
   }
   else if (end < data.length) {
@@ -95,7 +99,7 @@ function indexData (config, data, options, start, end) {
   console.dir(dataSubset)
   console.log('data.length: ' + data.length)
   console.log('start: ' + start + '\nend: ' + end)
-  console.log('dataSubset length: ' + dataSubset.length)
+  console.log('dataSubset.length: ' + dataSubset.length)
   data = null
 
   //Add to search - index with si.add
