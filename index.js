@@ -12,7 +12,7 @@ var program = require('commander')
 
 // Taking arguments with 'commander' 
 program
-  .version('0.1.2')
+  .version('0.1.8')
   .option('-c, --config [url]', 'specify the url for the JSON config file. Just the flag -c will give you the default.', 'https://raw.githubusercontent.com/eklem/search-index-indexer/master/config.json')
   .option('-d, --data [url]', 'specify the url for the JSON data set. Just the flag -d will give you the default.', 'https://raw.githubusercontent.com/fergiemcdowall/reuters-21578-json/master/data/justTen/justTen.json')
   .option('-s, --start [number]', 'Which item in your array to start with. Defaults to 0', 0)
