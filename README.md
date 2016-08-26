@@ -34,6 +34,12 @@ $ node index.js [options]
     -e, --end [number]    Which item in your array to end with. Defaults to length of array
 ```
 
+### Example
+
+```console
+$ node index.js -c https://raw.githubusercontent.com/eklem/search-index-indexer/master/config.json -d https://raw.githubusercontent.com/fergiemcdowall/reuters-21578-json/master/data/justTen/justTen.json
+```
+
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [license-url]: LICENSE
 [npm-url]: https://npmjs.org/package/search-index-indexer
