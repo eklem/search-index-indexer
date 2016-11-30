@@ -2,7 +2,6 @@ const JSONStream = require('JSONStream')
 const chalk = require('chalk')
 const request = require('request')
 const tc = require('term-cluster')
-//const url = 'https://raw.githubusercontent.com/eklem/dataset-vinmonopolet/master/dataset-vinmonopolet-test.str'
 var program = require('commander')
 
 const ops = {
@@ -14,7 +13,7 @@ var index
 // Taking arguments with 'commander'
 program
   .version('0.2.0')
-  .option('-c, --config [url]', 'specify the url for the JSON config file. Just the flag -c will give you the default.', 'https://raw.githubusercontent.com/eklem/search-index-indexer/master/config.json')
+  .option('-c, --config [url]', 'specify the url for the JSON config file. Just the flag -c will give you the default.', 'https://github.com/eklem/search-index-indexer/blob/search-index-v0.9.x/config.json')
   .option('-d, --data [url]', 'specify the url for the JSON data set. Just the flag -d will give you the default.', 'https://raw.githubusercontent.com/eklem/dataset-vinmonopolet/master/dataset-vinmonopolet-test.str')
   .parse(process.argv)
 //Default displaying --help when no arguments
@@ -24,9 +23,11 @@ if (!process.argv.slice(1).length) {
 }
 
 // Assigning the input to variables
-//var configurl = ('%s', program.config)
+var configurl = ('%s', program.config)
 var dataurl = ('%s', program.data)
 
+
+// indexData const with pipeline pipeline
 const indexData = function(err, newIndex) {
   if (!err) {
     index = newIndex
@@ -38,6 +39,20 @@ const indexData = function(err, newIndex) {
       .on('end', searchCLI)
   }
 }
+
+// Config const
+// Getting config JSON, setting nGramLength in options
+const config =  request(configurl, function (error, response, config) {
+  if (error) {
+    console.log('Config request error for ' + configurl + '\n' + error)
+  }
+  if (!error && response.statusCode == 200) {
+    // Parse file content to JSON and add nGramLength to options
+    config = JSON.parse(config)
+    console.log('config: ')
+    console.dir(config)
+   }
+})
 
 const printPrompt = function () {
   console.log()
@@ -71,4 +86,4 @@ const printResults = function (data) {
   console.log()
 }
 
-require('search-index')(ops, indexData)
+require('search-index')(config, indexData)
