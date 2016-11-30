@@ -9,6 +9,6 @@
   "logLevel": "info",
   "nGramLength": "3",
   "nGramSeparator": " ",
-  "separator": "/[\|' \.,\-|(\n)]+/",
+  "separator": "/[|' .,-|(\n)]+/",
   "stopwords": "require('stopword').no"
 }
