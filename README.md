@@ -1,13 +1,13 @@
 # search-index-indexer
 
-### Starting point test and debug your JSON format for both config and data, and the [search-index si.add API](https://github.com/fergiemcdowall/search-index/blob/master/doc/API.md#add).
+### Starting point test and debug your JSON config- and JSON streaming data format with the [search-index si.add API](https://github.com/fergiemcdowall/search-index/blob/master/doc/API.md#add). search-index must be at least v0.9.x.
 
 [![Join the chat at https://gitter.im/fergiemcdowall/search-index][gitter-image]][gitter-url]
 [![NPM version][npm-version-image]][npm-url]
 [![NPM downloads][npm-downloads-image]][npm-url]
 [![MIT License][license-image]][license-url]
 
-A generic indexer for the search engine [search-index](https://github.com/fergiemcdowall/search-index). Takes two JSON files as input: One config file, and one data file. Easy way to test if `search-index` is buggy or it's your own code that is the problem.
+A generic indexer for the search engine [search-index](https://github.com/fergiemcdowall/search-index). Takes a JSON config file and a JSON streaming data file as input. Easy way to test if `search-index` is buggy or it's your own code that is the problem.
 
 ## Install
 
@@ -30,8 +30,6 @@ $ node index.js [options]
     -V, --version         output the version number
     -c, --config [url]    specify the url for the JSON config file. Just the flag -c will give you the default.
     -d, --data [url]      specify the url for the JSON data set. Just the flag -d will give you the default.
-    -s, --start [number]  Which item in your array to start with. Defaults to 0
-    -e, --end [number]    Which item in your array to end with. Defaults to length of array
 ```
 
 ### Example
