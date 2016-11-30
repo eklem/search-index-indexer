@@ -1,16 +1,14 @@
 {
-    "batchname": "batch",
-    "nGramLength": [
-        1
-    ],
-    "fieldOptions": [
-        {
-            "fieldName": "topics",
-            "filter": true
-        },
-        {
-            "fieldName": "places",
-            "filter": true
-        }
-    ]
+  batchSize: 1000,
+  fieldedSearch: true,
+  fieldOptions: {},
+  preserveCase: false,
+  storeable: true,
+  searchable: true,
+  indexPath: 'si',
+  logLevel: 'info',
+  nGramLength: 3,
+  nGramSeparator: ' ',
+  separator: /[\|' \.,\-|(\n)]+/,
+  stopwords: require('stopword').no,
 }
