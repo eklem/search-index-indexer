@@ -1,0 +1,121 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'publish' ]
+2 info using npm@2.15.11
+3 info using node@v4.6.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/eklem/git_modules/search-index-indexer',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/eklem/.npm/search-index-indexer/0.2.2/package.tgz not in flight; packing
+9 verbose correctMkdir /home/eklem/.npm correctMkdir not in flight; initializing
+10 verbose tar pack [ '/home/eklem/.npm/search-index-indexer/0.2.2/package.tgz',
+10 verbose tar pack   '/home/eklem/git_modules/search-index-indexer' ]
+11 verbose tarball /home/eklem/.npm/search-index-indexer/0.2.2/package.tgz
+12 verbose folder /home/eklem/git_modules/search-index-indexer
+13 info prepublish search-index-indexer@0.2.2
+14 verbose addLocalTarball adding from inside cache /home/eklem/.npm/search-index-indexer/0.2.2/package.tgz
+15 verbose correctMkdir /home/eklem/.npm correctMkdir not in flight; initializing
+16 silly cache afterAdd search-index-indexer@0.2.2
+17 verbose afterAdd /home/eklem/.npm/search-index-indexer/0.2.2/package/package.json not in flight; writing
+18 verbose correctMkdir /home/eklem/.npm correctMkdir not in flight; initializing
+19 verbose afterAdd /home/eklem/.npm/search-index-indexer/0.2.2/package/package.json written
+20 silly publish { name: 'search-index-indexer',
+20 silly publish   description: 'A simple indexer to test and debug your JSON config- and JSONStream data format with the search-index si.add API.',
+20 silly publish   version: '0.2.2',
+20 silly publish   homepage: 'https://github.com/eklem/search-index-indexer',
+20 silly publish   engines: { node: '>=4' },
+20 silly publish   license: 'MIT',
+20 silly publish   dependencies:
+20 silly publish    { 'search-index': '~0.9.6',
+20 silly publish      JSONStream: '~1.2.1',
+20 silly publish      chalk: '~1.1.3',
+20 silly publish      request: '~2.79.0',
+20 silly publish      'term-cluster': '~0.0.1',
+20 silly publish      commander: '~2.9.0' },
+20 silly publish   author: { name: 'Espen Klem', email: 'espen.klem@gmail.com' },
+20 silly publish   keywords:
+20 silly publish    [ 'index',
+20 silly publish      'search-index',
+20 silly publish      'search-index-cookbook',
+20 silly publish      'norch',
+20 silly publish      'debug',
+20 silly publish      'test',
+20 silly publish      'indexer',
+20 silly publish      'JSON',
+20 silly publish      'JSON streaming' ],
+20 silly publish   main: './index.js',
+20 silly publish   repository:
+20 silly publish    { type: 'git',
+20 silly publish      url: 'git+https://github.com/eklem/search-index-indexer.git' },
+20 silly publish   readme: '# search-index-indexer\n\n### Starting point test and debug your JSON config- and JSON streaming data format with the [search-index si.add API](https://github.com/fergiemcdowall/search-index/blob/master/doc/API.md#add). search-index must be at least v0.9.x.\n\n[![Join the chat at https://gitter.im/fergiemcdowall/search-index][gitter-image]][gitter-url]\n[![NPM version][npm-version-image]][npm-url]\n[![NPM downloads][npm-downloads-image]][npm-url]\n[![MIT License][license-image]][license-url]\n\nA generic indexer for the search engine [search-index](https://github.com/fergiemcdowall/search-index). Takes a JSON config file and a JSON streaming data file as input. Easy way to test if `search-index` is buggy or it\'s your own code that is the problem.\n\n## Install\n\n```console\n$ npm install search-index-indexer\n```\n\n## Usage\n\nUpload your JSON config and data set to a GIST, or a GitHub repo and test them with the search-index-indexer. Remember to use the raw-file.\n\n### Options\n\n```console\n$ node index.js [options]\n\n  Options:\n\n    -h, --help            output usage information\n    -V, --version         output the version number\n    -c, --config [url]    specify the url for the JSON config file. Just the flag -c will give you the default.\n    -d, --data [url]      specify the url for the JSON data set. Just the flag -d will give you the default.\n```\n\n### Example\n\n```console\n$ node index.js -c https://raw.githubusercontent.com/eklem/search-index-indexer/master/config.json -d https://raw.githubusercontent.com/eklem/dataset-vinmonopolet/master/dataset-vinmonopolet-redwine.str\n```\n\n[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square\n[license-url]: LICENSE\n[npm-url]: https://npmjs.org/package/search-index-indexer\n[npm-version-image]: http://img.shields.io/npm/v/search-index-indexer.svg?style=flat-square\n[npm-downloads-image]: http://img.shields.io/npm/dm/search-index-indexer.svg?style=flat-square\n[gitter-url]: https://gitter.im/fergiemcdowall/search-index?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge\n[gitter-image]: https://img.shields.io/badge/GITTER-join%20chat-green.svg?style=flat-square\n',
+20 silly publish   readmeFilename: 'README.md',
+20 silly publish   gitHead: 'aabafab0ba3f688db94e4339e75c5b0dabdcc2e6',
+20 silly publish   bugs: { url: 'https://github.com/eklem/search-index-indexer/issues' },
+20 silly publish   _id: 'search-index-indexer@0.2.2',
+20 silly publish   scripts: {},
+20 silly publish   _shasum: '25899a3e7c1d1644fcc7661f6060d703e8048989',
+20 silly publish   _from: '.' }
+21 verbose getPublishConfig undefined
+22 silly mapToRegistry name search-index-indexer
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: 'search-index-indexer',
+25 silly mapToRegistry   scope: null,
+25 silly mapToRegistry   name: 'search-index-indexer',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/search-index-indexer
+27 verbose publish registryBase https://registry.npmjs.org/
+28 silly publish uploading /home/eklem/.npm/search-index-indexer/0.2.2/package.tgz
+29 verbose request uri https://registry.npmjs.org/search-index-indexer
+30 verbose request sending authorization for write operation
+31 info attempt registry request try #1 at 3:28:51 AM
+32 verbose request using bearer token for auth
+33 verbose request id c213d48dd7dd5ab0
+34 http request PUT https://registry.npmjs.org/search-index-indexer
+35 http 403 https://registry.npmjs.org/search-index-indexer
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '95',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Thu, 01 Dec 2016 08:28:52 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-lhr6327-LHR',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1480580931.504742,VS0,VE937',
+36 verbose headers   vary: 'Accept-Encoding' }
+37 verbose request invalidating /home/eklem/.npm/registry.npmjs.org/search-index-indexer on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: "You cannot publish over the previously published version 0.2.2." : search-index-indexer
+39 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+39 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+39 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:187:22)
+39 verbose stack     at emitTwo (events.js:87:13)
+39 verbose stack     at Request.emit (events.js:172:7)
+39 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+39 verbose stack     at emitOne (events.js:77:13)
+39 verbose stack     at Request.emit (events.js:169:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:965:12)
+40 verbose statusCode 403
+41 verbose pkgid search-index-indexer
+42 verbose cwd /home/eklem/git_modules/search-index-indexer
+43 error Linux 4.4.0-47-generic
+44 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
+45 error node v4.6.2
+46 error npm  v2.15.11
+47 error code E403
+48 error "You cannot publish over the previously published version 0.2.2." : search-index-indexer
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]

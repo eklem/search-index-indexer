@@ -1,7 +1,7 @@
 {
     "name": "search-index-indexer",
     "description": "A simple indexer to test and debug your JSON config- and JSONStream data format with the search-index si.add API.",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "homepage": "https://github.com/eklem/search-index-indexer",
     "engines": {
         "node": ">=4"
