@@ -4,11 +4,6 @@ const request = require('request')
 const tc = require('term-cluster')
 var program = require('commander')
 
-const ops = {
-  indexPath: 'myCoolIndex',
-  logLevel: 'error'
-}
-
 var index
 // Taking arguments with 'commander'
 program
