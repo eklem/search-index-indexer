@@ -40,7 +40,6 @@ const indexData = function(err, newIndex) {
 }
 
 // Config const
-// Getting config JSON, setting nGramLength in options
 const config =  request(configurl, function (error, response, config) {
   if (error) {
     console.log('Config request error for ' + configurl + '\n' + error)

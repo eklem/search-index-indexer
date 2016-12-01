@@ -35,7 +35,7 @@ $ node index.js [options]
 ### Example
 
 ```console
-$ node index.js -c https://raw.githubusercontent.com/eklem/search-index-indexer/master/config.json -d https://raw.githubusercontent.com/fergiemcdowall/reuters-21578-json/master/data/justTen/justTen.json
+$ node index.js -c https://raw.githubusercontent.com/eklem/search-index-indexer/master/config.json -d https://raw.githubusercontent.com/eklem/dataset-vinmonopolet/master/dataset-vinmonopolet-redwine.str
 ```
 
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
