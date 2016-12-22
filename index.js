@@ -7,8 +7,8 @@ var program = require('commander')
 var index
 // Taking arguments with 'commander'
 program
-  .version('0.2.3')
-  .option('-c, --config [url]', 'specify the url for the JSON config file. Just the flag -c will give you the default.', 'https://raw.githubusercontent.com/eklem/search-index-indexer/search-index-v0.9.x/config.json')
+  .version('0.2.4')
+  .option('-c, --config [url]', 'specify the url for the JSON config file. Just the flag -c will give you the default.', 'https://raw.githubusercontent.com/eklem/search-index-indexer/master/config.json')
   .option('-d, --data [url]', 'specify the url for the JSON data set. Just the flag -d will give you the default.', 'https://raw.githubusercontent.com/eklem/dataset-vinmonopolet/master/dataset-vinmonopolet-test.str')
   .parse(process.argv)
 //Default displaying --help when no arguments
@@ -23,7 +23,7 @@ var dataurl = ('%s', program.data)
 
 
 // indexData const with pipeline pipeline
-const indexData = function(err, newIndex) {
+var indexData = function(err, newIndex) {
   if (!err) {
     index = newIndex
     request(dataurl)
@@ -35,7 +35,7 @@ const indexData = function(err, newIndex) {
 }
 
 // Config const
-const config =  request(configurl, function (error, response, config) {
+var config =  request(configurl, function (error, response, config) {
   if (error) {
     console.log('Config request error for ' + configurl + '\n' + error)
   }
