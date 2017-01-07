@@ -40,12 +40,14 @@ var config =  request(configurl, function (error, response, config) {
     console.log('Config request error for ' + configurl + '\n' + error)
   }
   if (!error && response.statusCode == 200) {
-    // Parse file content to JSON and add nGramLength to options
+    // Parse file content to JSON
     config = JSON.parse(config)
     console.log('config: ')
     console.dir(config)
+    require('search-index')(config, indexData)
    }
 })
+
 
 /*
 const printPrompt = function () {
@@ -80,4 +82,4 @@ const printResults = function (data) {
   console.log()
 }
 */
-require('search-index')(config, indexData)
+

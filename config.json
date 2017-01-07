@@ -5,7 +5,7 @@
   "preserveCase": false,
   "storeable": true,
   "searchable": true,
-  "indexPath": "data",
+  "indexPath": "norch-index/data",
   "logLevel": "info",
   "nGramLength": "3",
   "nGramSeparator": " ",
