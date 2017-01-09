@@ -23,8 +23,11 @@ var dataurl = ('%s', program.data)
 
 
 // indexData const with pipeline pipeline
-var indexData = function(err, newIndex) {
-  if (!err) {
+var indexData = function(error, newIndex) {
+  if (error) {
+    console.log('Data error for ' + dataurl + '\n' + error)
+  }
+  if (!error) {
     index = newIndex
     request(dataurl)
       .pipe(JSONStream.parse())
@@ -35,51 +38,18 @@ var indexData = function(err, newIndex) {
 }
 
 // Config const
-var config =  request(configurl, function (error, response, config) {
+var config = request(configurl, function (error, response, conf) {
   if (error) {
     console.log('Config request error for ' + configurl + '\n' + error)
   }
   if (!error && response.statusCode == 200) {
-    // Parse file content to JSON
-    config = JSON.parse(config)
+    // Parse file content to JSON and add nGramLength to options
+    config = JSON.parse(conf)
     console.log('config: ')
     console.dir(config)
-    require('search-index')(config, indexData)
    }
 })
 
+require('search-index')(config, indexData)
 
-/*
-const printPrompt = function () {
-  console.log()
-  console.log()
-  process.stdout.write('search > ')
-}
-
-const searchCLI = function () {
-  printPrompt()
-  process.stdin.resume()
-  process.stdin.on('data', search)
-}
-
-const search = function(rawQuery) {
-  index.search(rawQuery.toString().slice(0, -1))
-    .on('data', printResults)
-    .on('end', printPrompt)
-}
-
-const printResults = function (data) {
-  console.log('\n' + chalk.blue(data.document.Varenummer) + ' : ' + chalk.blue(data.document.Varenavn))
-  const terms = Object.keys(data.scoringCriteria[0].df).map(function(item) {
-    return item.substring(25)
-  })
-  for (var key in data.document) {
-    if (data.document[key]) {
-      var teaser = tc(data.document[key], terms)
-      if (teaser) console.log(teaser)
-    }
-  }
-  console.log()
-}
-*/
 
