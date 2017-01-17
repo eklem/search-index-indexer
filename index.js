@@ -48,6 +48,9 @@ var config = request(configurl, function (error, response, conf) {
     console.dir(config)
    }
 })
+
+require('search-index')(config, indexData)
+
 /*var config = {
   batchSize: 1000,
   fieldedSearch: true,
@@ -58,5 +61,3 @@ var config = request(configurl, function (error, response, conf) {
   logLevel: 'error',
   nGramLength: [1,2,3,4]
 }*/
-
-require('search-index')(config, indexData)

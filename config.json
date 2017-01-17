@@ -9,5 +9,5 @@
   "logLevel": "error",
   "nGramLength": ["1","2","3","4"],
   "nGramSeparator": " ",
-  "separator": "/[|' .,-|(\n)]+/",
+  "separator": "/[|' .,-|(\n)]+/"
 }
