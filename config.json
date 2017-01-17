@@ -1,5 +1,5 @@
 {
-  "batchSize": "1000",
+  "batchSize": 1000,
   "fieldedSearch": true,
   "fieldOptions": {},
   "preserveCase": false,
@@ -7,7 +7,7 @@
   "searchable": true,
   "indexPath": "data",
   "logLevel": "error",
-  "nGramLength": ["1","2","3","4"],
+  "nGramLength": [1,2,3,4],
   "nGramSeparator": " ",
   "separator": "/[|' .,-|(\n)]+/"
 }
