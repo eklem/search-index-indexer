@@ -8,8 +8,8 @@ var index
 // Taking arguments with 'commander'
 program
   .version('0.2.6')
-  .option('-c, --config [url]', 'specify the url for the JSON config file. Just the flag -c will give you the default.', 'https://raw.githubusercontent.com/eklem/search-index-indexer/master/config.json')
-  .option('-d, --data [url]', 'specify the url for the JSON data set. Just the flag -d will give you the default.', 'https://raw.githubusercontent.com/eklem/dataset-vinmonopolet/master/dataset-vinmonopolet-test.str')
+  .option('-c, --config [url]', 'specify the url for the JSON config file. Just the flag -c will give you the default.', 'https://cdn.rawgit.com/eklem/search-index-indexer/master/config.json')
+  .option('-d, --data [url]', 'specify the url for the JSON data set. Just the flag -d will give you the default.', 'https://cdn.rawgit.com/eklem/dataset-vinmonopolet/master/dataset-vinmonopolet-test.str')
   .parse(process.argv)
 //Default displaying --help when no arguments
 if (!process.argv.slice(1).length) {
@@ -38,7 +38,7 @@ var indexData = function(error, newIndex) {
 }
 
 // Config const
-var config = request(configurl, function (error, response, conf) {
+request(configurl, function (error, response, conf) {
   if (error) {
     console.log('Config request error for ' + configurl + '\n' + error)
   }
@@ -46,10 +46,10 @@ var config = request(configurl, function (error, response, conf) {
     config = JSON.parse(conf)
     console.log('config: ')
     console.dir(config)
+    require('search-index')(config, indexData)
    }
 })
 
-require('search-index')(config, indexData)
 
 /*var config = {
   batchSize: 1000,
