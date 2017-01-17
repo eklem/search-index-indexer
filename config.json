@@ -7,8 +7,7 @@
   "searchable": true,
   "indexPath": "data",
   "logLevel": "info",
-  "nGramLength": "3",
+  "nGramLength": ["1","2","3","4"],
   "nGramSeparator": " ",
   "separator": "/[|' .,-|(\n)]+/",
-  "stopwords": "require('stopword').no"
 }

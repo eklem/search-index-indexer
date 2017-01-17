@@ -43,13 +43,20 @@ var config = request(configurl, function (error, response, conf) {
     console.log('Config request error for ' + configurl + '\n' + error)
   }
   if (!error && response.statusCode == 200) {
-    // Parse file content to JSON and add nGramLength to options
     config = JSON.parse(conf)
     console.log('config: ')
     console.dir(config)
    }
 })
+/*var config = {
+  batchSize: 1000,
+  fieldedSearch: true,
+  preserveCase: false,
+  storeable: true,
+  searchable: true,
+  indexPath: 'data',
+  logLevel: 'error',
+  nGramLength: [1,2,3,4]
+}*/
 
 require('search-index')(config, indexData)
-
-
