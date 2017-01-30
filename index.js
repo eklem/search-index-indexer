@@ -7,7 +7,7 @@ var program = require('commander')
 var index
 // Taking arguments with 'commander'
 program
-  .version('0.2.6')
+  .version('0.2.10')
   .option('-c, --config [url]', 'specify the url for the JSON config file. Just the flag -c will give you the default.', 'https://cdn.rawgit.com/eklem/search-index-indexer/master/config.json')
   .option('-d, --data [url]', 'specify the url for the JSON data set. Just the flag -d will give you the default.', 'https://cdn.rawgit.com/eklem/dataset-vinmonopolet/master/dataset-vinmonopolet-test.str')
   .parse(process.argv)
