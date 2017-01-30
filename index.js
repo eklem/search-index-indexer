@@ -29,11 +29,17 @@ var indexData = function(error, newIndex) {
   }
   if (!error) {
     index = newIndex
+    var timeStart = Date.now()
     request(dataurl)
       .pipe(JSONStream.parse())
       .pipe(index.defaultPipeline())
       .pipe(index.add())
       .on('data', function(data) {})
+      .on('end', () => {
+        var timeEnd = Date.now()
+        var timeUsed = Math.trunc((timeEnd - timeStart) / 1000)
+        console.log('Indexed in ' +  timeUsed + ' seconds')
+      })
   }
 }
 
