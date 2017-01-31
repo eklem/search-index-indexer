@@ -20,7 +20,7 @@ if (!process.argv.slice(1).length) {
 // Assigning the input to variables
 var configurl = ('%s', program.config)
 var dataurl = ('%s', program.data)
-
+let count = 0
 
 // indexData const with pipeline pipeline
 var indexData = function(error, newIndex) {
@@ -34,7 +34,9 @@ var indexData = function(error, newIndex) {
       .pipe(JSONStream.parse())
       .pipe(index.defaultPipeline())
       .pipe(index.add())
-      .on('data', function(data) {})
+      .on('data', function(data) {
+        //console.dir(data) // What's going on in the indexing process
+      })
       .on('end', () => {
         var timeEnd = Date.now()
         var timeUsed = Math.trunc((timeEnd - timeStart) / 1000)
@@ -55,15 +57,3 @@ request(configurl, function (error, response, conf) {
     require('search-index')(config, indexData)
    }
 })
-
-
-/*var config = {
-  batchSize: 1000,
-  fieldedSearch: true,
-  preserveCase: false,
-  storeable: true,
-  searchable: true,
-  indexPath: 'data',
-  logLevel: 'error',
-  nGramLength: [1,2,3,4]
-}*/
