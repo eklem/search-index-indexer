@@ -22,6 +22,8 @@ var configurl = ('%s', program.config)
 var dataurl = ('%s', program.data)
 let count = 0
 
+console.log('Indexing URL: ' + dataurl)
+
 // indexData const with pipeline pipeline
 var indexData = function(error, newIndex) {
   if (error) {
