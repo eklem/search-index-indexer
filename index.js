@@ -20,7 +20,7 @@ if (!process.argv.slice(1).length) {
 // Assigning the input to variables
 var configurl = ('%s', program.config)
 var dataurl = ('%s', program.data)
-let count = 0
+var count = 0
 
 console.log('Indexing URL: ' + dataurl)
 
